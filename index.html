@@ -17,6 +17,11 @@
 <body>
   <div class="container">
     <h1>Welcome to the Butler!</h1>
+
+    {{if .}}
+      <p>Scan QR code to login</p>
+      <img src="https://login.weixin.qq.com/qrcode/{{.}}" alt="">
+    {{end}}
   </div>
 </body>
 </html>
