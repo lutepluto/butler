@@ -14,3 +14,9 @@
 .glide/
 
 butler
+
+# IDE 
+.idea
+
+# Debug
+debug
