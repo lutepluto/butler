@@ -26,9 +26,8 @@ func main() {
 
 func rootHandler(w http.ResponseWriter, request *http.Request) {
 	session := wechat.DefaultSession
-	log.Printf("The default session: %#v", session)
-	err := templates.ExecuteTemplate(w, "index.html", session.UUID)
-	if err != nil {
+
+	if err := templates.ExecuteTemplate(w, "index.html", session.UUID); err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 	}
 }
