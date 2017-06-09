@@ -23,8 +23,8 @@ const (
 
 var defaultClient = &http.Client{}
 
-// GetUUID fetches UUID for subsequent QR code image request
-func GetUUID() (string, error) {
+// UUID fetches UUID for subsequent QR code image request
+func UUID() (string, error) {
 	re, err := regexp.Compile("window.QRLogin.code = (\\d+); window.QRLogin.uuid = \"(\\S+?)\"")
 	if err != nil {
 		return "", err
